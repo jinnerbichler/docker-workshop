@@ -3,3 +3,7 @@
 ```shell script
 docker-compose up --build
 ```
+
+**Helper**
+
+- Install ping  `apt-get update && apt-get install -y iputils-ping`

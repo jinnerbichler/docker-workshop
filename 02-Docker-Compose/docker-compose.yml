@@ -12,7 +12,9 @@ services:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=password
     ports:
-      - 8080:8080beim
+      - 8080:8080
+    depends_on:
+      - database
   database:
     image: postgres:11
     container_name: workshop02-database
