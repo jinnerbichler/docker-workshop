@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB:testDB}
+    username: ${POSTGRES_USER:root}
+    password: ${POSTGRES_PASSWORD:changeme}
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect

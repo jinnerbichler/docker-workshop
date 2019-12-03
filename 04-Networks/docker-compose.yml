@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  web:
+    image: nginx:1.17
+    container_name: workshop04-web
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+    - 8080:8080
+  app:
+    build: .
+    container_name: workshop04-app
+    environment:
+      - POSTGRES_HOST=database
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=mydb
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=password
+  database:
+    image: postgres:11
+    container_name: workshop04-database
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=mydb
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
