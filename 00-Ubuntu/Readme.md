@@ -27,3 +27,9 @@ docker ps -a
 ```shell script
 docker diff ubuntu-playground
 ```
+
+**List resource consumption**:
+
+```shell script
+docker stats
+```
