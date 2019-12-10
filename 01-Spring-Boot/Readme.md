@@ -34,8 +34,8 @@ docker run --name workshop01 -d -p 8080:8080 -t jinnerbichler/workshop01:v0.1.0
 docker push jinnerbichler/workshop01:v0.1.0
 ```
 
-**Show Container Diff**:
+**Show Logs of Container**:
 
 ```shell script
-docker diff workshop01
+docker logs -f workshop01
 ```
