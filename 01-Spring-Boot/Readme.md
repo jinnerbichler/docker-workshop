@@ -28,14 +28,14 @@ in daemon mode:
 docker run --name workshop01 -d -p 8080:8080 -t jinnerbichler/workshop01:v0.1.0
 ```
 
-**Push Image**:
-
-```shell script
-docker push jinnerbichler/workshop01:v0.1.0
-```
-
 **Show Logs of Container**:
 
 ```shell script
 docker logs -f workshop01
+```
+
+**Push Image**:
+
+```shell script
+docker push jinnerbichler/workshop01:v0.1.0
 ```

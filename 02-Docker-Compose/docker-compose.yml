@@ -2,8 +2,7 @@ version: '3'
 
 services:
   app:
-    image: jinnerbichler/workshop02
-#    build: .
+    build: .
     container_name: workshop02-app
     environment:
       - POSTGRES_HOST=database
@@ -25,8 +24,7 @@ services:
     ports:
       - 54320:5432
     volumes:
-      - ./postgres-data:/var/lib/postgresql/data
-#      - postgres-data:/var/lib/postgresql/data
-#
-#volumes:
-#  postgres-data:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
