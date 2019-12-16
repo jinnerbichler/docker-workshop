@@ -10,8 +10,8 @@ mvn clean package -DskipTests
 docker build -t jinnerbichler/workshop02 .
 ```
 
-**Run Container**:
+**Run Containers**:
 
 ```shell script
-docker run -e "SPRING_PROFILES_ACTIVE=prod" -p 8080:8080 -t jinnerbichler/workshop01
+docker-compose up --build
 ```
